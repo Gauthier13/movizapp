@@ -1,0 +1,92 @@
+.body{
+background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.App {
+  text-align: center;
+}
+
+.card{
+  margin-bottom: 26px;
+  text-align: left;
+  transition: .3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.overlay-image {
+  position: relative; /* Important pour positionner le contenu par dessus, relatif à l'élément */
+  display: inline-block; /* Prendra la forme de son contenu */
+}
+
+.overlay-image {
+ /* Ou display: block, pour enlever l'espace blanc */
+  display: block;
+}
+
+.hover-image  {
+  /* Positionnement du contenu hover */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  /* Effets de transition */
+  opacity: 0; /* On cache l'élément via son opacité */
+  transition: opacity 0.25s ease-in-out; /* Effet de transition sur le hover */
+  
+  /* Style du contenu hover */
+  background-color: rgba(0, 0, 0, 0.7); /* Couleur par défaut */
+  color: rgb(252, 252, 252);
+  padding: 30px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  
+  /* Centrer le contenu */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.overlay-image:hover .hover-image{
+  opacity: 1; /* Lors du hover, on remet l'opacité à 1 */
+}
+
+.card:hover{
+  z-index: 1;
+  transform: scale(1.02);  
+}
+
+.navbar{
+  margin-bottom: 5px;
+  position: sticky;
+}
+
+.icon{
+  transition: .3s;
+}
+
+.icon:hover{
+  transform: scale(1.2);  
+}
+
+.filmTitle{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.film{
+  color :hsla(0, 0%, 91%, 0.886);
+}
+
+.nav{
+  align-items: center;
+}
+
+#Popover1{
+  border-radius: 20px;
+}
